@@ -14,6 +14,10 @@ setInterval(() => {
     displayCurrentDayForecast();
     displaySecondDayForecast();
     displayThirdDayForecast();
+    displayFourthDayForecast();
+    displayFifthDayForecast();
+    displaySixthDayForecast();
+    displaySeventhDayForecast();
 
 }, 1000)
 
