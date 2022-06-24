@@ -14,10 +14,10 @@
 
             <div class="date-container">
                 <div class="time" id="time">
-                    12:30 <span id="am-pm">PM</span>
+                <p id="currentTime"></p>
                 </div>
                 <div class="date" id="date">
-                    Friday June 24th
+                <p id="currentDate"></p>
                 </div>
 
                 <div class="others" id="current-weather-items">
@@ -45,7 +45,7 @@
         <div class="future-forecast">
             <div class="today" id="current-temperature">
                 <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
-                <div class="day">Friday</div>
+                <div class="day" id="day"></div>
                 <div class="temp">Night 25.6&#176; C</div>
                 <div class="temp">Day 35.6&#176; C</div>
 
@@ -53,37 +53,37 @@
 
             <div class="weather-forecast" id="weather-forecast">
                 <div class="weather-forecast-item">
-                    <div class="day">Saturday</div>
+                    <div id="secondday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
                 </div>
                 <div class="weather-forecast-item">
-                    <div class="day">Sunday</div>
+                    <div id="thirdday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
                 </div>
                 <div class="weather-forecast-item">
-                    <div class="day">Monday</div>
+                    <div class="fourthday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
                 </div>
                 <div class="weather-forecast-item">
-                    <div class="day">Tuesday</div>
+                    <div class="fifthday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
                 </div>
                 <div class="weather-forecast-item">
-                    <div class="day">Wednesday</div>
+                    <div class="sixthday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
                 </div>
                 <div class="weather-forecast-item">
-                    <div class="day">Thursday</div>
+                    <div class="seventhday"></div>
                     <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
                     <div class="temp">Night 25.6&#176; C</div>
                     <div class="temp">Day 35.6&#176; C</div>
@@ -93,6 +93,9 @@
     </div>
     
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="photoAPI.js"></script>
 <script src="script.js"></script>
 </html>
