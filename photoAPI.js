@@ -13,9 +13,10 @@ function renderItem() {
     document.body.style.backgroundImage =
       "url('https://source.unsplash.com/1600x900/?palm tree')";
     let photo = document.querySelector("#photo");
-    photo.textContent = response.content;
+    photo = response.content;
   });
 }
+
 for (let i = 0; i < numItemsToGenerate; i++) {
   renderItem();
 }
