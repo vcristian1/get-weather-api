@@ -76,8 +76,6 @@ body {
 .today {
     background-color: black;
     opacity: 70%;
-    border-radius: 10px;
-    margin: 5px;
 }
 
 .future-forecast {
@@ -92,10 +90,54 @@ body {
     /* display: flex; */
     background-color:black;
     opacity: 70%;
-    border-radius: 10px;
-    margin: 5px
+    
 }
 
 .future-forecast .weather-forecast {
     display: flex;
+}
+
+@media only screen and (max-width: 400px){
+    .container {
+        padding: 10px;
+    }
+
+    .future-forecast{
+        justify-content: start;
+        align-items: none;  
+        overflow-y: scroll;
+        margin-right: 8px;
+    }
+
+    .date-container .time {
+        font-size: 30px;
+    }
+
+    .date-container .date {
+        font-size: 18px;
+    }
+
+    .date-container #am-pm{
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .date-container .others {
+        margin-left: 10px;
+        margin-top: 10px;
+
+    }
+
+    .place-container {
+        text-align: end;
+    }
+
+    .place-container .time-zone {
+        font-size: 20px;
+    }
+    
+    .place-container .country {
+        font-size: 15px;
+    }
+    
 }
