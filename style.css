@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background:url("https://unsplash.com/photos/xgc3DdeLy3A");
+    font-family: 'poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    color: aliceblue;
+    
+}
+
+.container {
+    padding: 20px 70px;
+    color: aliceblue;
+}
+.current-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-container .time{
+    font-size: 70px;
+}
+
