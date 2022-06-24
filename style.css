@@ -24,7 +24,16 @@ body {
     flex-wrap: wrap;
 }
 
+.time-zone, .country {
+    margin-top: 5px;
+}
+
 .date-container .time{
     font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
 }
 
