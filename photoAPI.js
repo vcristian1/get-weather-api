@@ -1,7 +1,7 @@
 const numItemsToGenerate = 1;
 
 function renderItem() {
-  fetch(`https://source.unsplash.com/1600x900/?palm tree`).then((response) => {
+  fetch(`https://source.unsplash.com/1600x900/?palm trees`).then((response) => {
     let item = document.createElement("div");
 
     item.classList.add("item");
@@ -11,7 +11,7 @@ function renderItem() {
     `;
     
     document.body.style.backgroundImage =
-      "url('https://source.unsplash.com/1600x900/?palm tree')";
+      "url('https://source.unsplash.com/1600x900/?palm trees')";
     let photo = document.querySelector("#photo");
     photo = response.content;
   });
