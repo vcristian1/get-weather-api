@@ -9,6 +9,10 @@ const currentTime = document.getElementById("currentTime")
 const secondDay = document.querySelector(".secondday");
 const thirdDay = document.querySelector(".thirdday");
 const fourthDay = document.querySelector(".fourthday");
+const fifthDay = document.querySelector(".fifthday");
+const sixthDay = document.querySelector(".sixthday");
+const seventhDay = document.querySelector(".seventhday");
+
 
 const apikey = "1ffa8a66804d64ed7ae1213c9ac1bf3e"
 
@@ -48,6 +52,7 @@ function getWeatherData () {
             renderTodaysForecast(data)
             renderFifthDayForecast(data)
             renderSixthDayForecast(data)
+            renderSeventhDayForecast(data)
             
         })
     })
@@ -134,6 +139,50 @@ function renderFourthDayForecast (data) {
     `
 }
 
+function renderFifthDayForecast (data) {
+    let {temp_max, temp_min} = data.list[4].main;
+    let minFahr = temp_min * 9 / 5 + 32;
+    let maxFahr = temp_max * 9 / 5 + 32;
+    
+
+    fifthDay.innerHTML = `<div class="weather-forecast-item fifthday">
+    <div id="fifthday"></div>
+    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
+    <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
+</div>
+    `
+}
+
+function renderSixthDayForecast (data) {
+    let {temp_max, temp_min} = data.list[5].main;
+    let minFahr = temp_min * 9 / 5 + 32;
+    let maxFahr = temp_max * 9 / 5 + 32;
+    
+
+    sixthDay.innerHTML = `<div class="weather-forecast-item sixthday">
+    <div id="sixthday"></div>
+    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
+    <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
+</div>
+    `
+}
+
+function renderSeventhDayForecast (data) {
+    let {temp_max, temp_min} = data.list[6].main;
+    let minFahr = temp_min * 9 / 5 + 32;
+    let maxFahr = temp_max * 9 / 5 + 32;
+    
+
+    seventhDay.innerHTML = `<div class="weather-forecast-item seventhday">
+    <div id="seventhday"></div>
+    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
+    <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
+</div>
+    `
+}
 
 
 
