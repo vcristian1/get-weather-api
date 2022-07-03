@@ -12,6 +12,17 @@ const fourthDay = document.querySelector(".fourthday");
 const fifthDay = document.querySelector(".fifthday");
 const sixthDay = document.querySelector(".sixthday");
 const seventhDay = document.querySelector(".seventhday");
+const currentCity = document.getElementById("current-city");
+const firstIcon = document.getElementById("first-icon");
+const secondIcon = document.getElementById("second-icon");
+const thirdIcon = document.getElementById("third-icon");
+const fourthIcon = document.getElementById("fourth-icon");
+const fifthIcon = document.getElementById("fifth-icon");
+const sixthIcon = document.getElementById("sixth-icon");
+const seventhIcon = document.getElementById("seventh-icon");
+
+
+
 
 
 const apikey = "1ffa8a66804d64ed7ae1213c9ac1bf3e"
@@ -53,7 +64,15 @@ function getWeatherData () {
             renderFifthDayForecast(data)
             renderSixthDayForecast(data)
             renderSeventhDayForecast(data)
-            
+            renderCityName(data);
+            renderFirstWeatherIcon(data);
+            renderSecondWeatherIcon(data);
+            renderThirdWeatherIcon(data);
+            renderFourthWeatherIcon(data);
+            renderFifthWeatherIcon(data);
+            renderSixthWeatherIcon(data);
+            renderSeventhWeatherIcon(data);
+
         })
     })
 }
@@ -73,8 +92,8 @@ function renderWeatherForecast (data) {
     <div>${pressure} MB</div>
 </div>
 <div class="weather-item">
-    <div>Temperature
-    ${Math.round(ctof)} &#x2109;</div>
+    <div>Temperature</div>
+    <div>${Math.round(ctof)} &#x2109;</div>
 </div>  
     `
 }
@@ -182,6 +201,52 @@ function renderSeventhDayForecast (data) {
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
     `
+}
+
+function renderCityName (data) {
+    let {name} = data.city
+
+    currentCity.innerHTML = `<div class="current-city">
+    <p>${name}</p>
+</div>`
+}
+
+function renderFirstWeatherIcon (data) {
+    let {icon} = data.list[0].weather[0]
+
+    firstIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+
+function renderSecondWeatherIcon (data) {
+    let {icon} = data.list[1].weather[0]
+
+    secondIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+
+function renderThirdWeatherIcon (data) {
+    let {icon} = data.list[2].weather[0]
+
+    thirdIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+function renderFourthWeatherIcon (data) {
+    let {icon} = data.list[3].weather[0]
+
+    fourthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+function renderFifthWeatherIcon (data) {
+    let {icon} = data.list[4].weather[0]
+
+    fifthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+function renderSixthWeatherIcon (data) {
+    let {icon} = data.list[5].weather[0]
+
+    sixthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
+}
+function renderSeventhWeatherIcon (data) {
+    let {icon} = data.list[6].weather[0]
+
+    seventhIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
 }
 
 
