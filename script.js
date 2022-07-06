@@ -1,9 +1,4 @@
-const timeEl = document.getElementById("time");
-const dateEl = document.getElementById("date");
 const currentWeatherItemsEl = document.getElementById("current-weather-items");
-const timeZoneEl = document.getElementById("time-zone");
-const countryEl = document.getElementById("country");
-const weatherForecastEl = document.getElementById("weather-forecast")
 const currentTempEl = document.getElementById("current-temperature");
 const currentTime = document.getElementById("currentTime")
 const secondDay = document.querySelector(".secondday");
@@ -20,10 +15,6 @@ const fourthIcon = document.getElementById("fourth-icon");
 const fifthIcon = document.getElementById("fifth-icon");
 const sixthIcon = document.getElementById("sixth-icon");
 const seventhIcon = document.getElementById("seventh-icon");
-
-
-
-
 
 const apikey = "1ffa8a66804d64ed7ae1213c9ac1bf3e"
 
@@ -76,6 +67,7 @@ function getWeatherData () {
         })
     })
 }
+
 getWeatherData();
 
 function renderWeatherForecast (data) {
@@ -248,10 +240,3 @@ function renderSeventhWeatherIcon (data) {
 
     seventhIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
 }
-
-
-
-
-
-
-
