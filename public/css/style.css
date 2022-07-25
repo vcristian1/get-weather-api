@@ -97,6 +97,10 @@ body {
     display: flex;
 }
 
+.mobile-direction {
+    display: none;
+}
+
 @media only screen and (max-width: 400px){
     .container {
         padding: 10px;
@@ -139,5 +143,14 @@ body {
     .place-container .country {
         font-size: 15px;
     }
-    
+
+    .mobile-direction-container {
+        text-align: center;
+    }
+
+    .mobile-direction {
+        display: contents;
+        margin-left: 10px;
+    }
+
 }
