@@ -6,9 +6,8 @@ This is a dynamic Weather Application powered by the Open Weather API. Open Weat
 
 ## URls
 [Github Pages](https://vcristian1.github.io/get-weather-api/) <br>
-[Repository](https://github.com/vcristian1/get-weather-api)
 
 ### Mobile 
-![Screenshot](/screenshot1.png)
+![Screenshot](/assets/screenshot1.png)
 ### Desktop
-![Screenshot](/screenshot2.png)
+![Screenshot](/assets/screenshot2.png)
