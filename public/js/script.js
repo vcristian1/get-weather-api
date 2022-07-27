@@ -8,13 +8,6 @@ const fifthDay = document.querySelector(".fifthday");
 const sixthDay = document.querySelector(".sixthday");
 const seventhDay = document.querySelector(".seventhday");
 const currentCity = document.getElementById("current-city");
-const firstIcon = document.getElementById("first-icon");
-const secondIcon = document.getElementById("second-icon");
-const thirdIcon = document.getElementById("third-icon");
-const fourthIcon = document.getElementById("fourth-icon");
-const fifthIcon = document.getElementById("fifth-icon");
-const sixthIcon = document.getElementById("sixth-icon");
-const seventhIcon = document.getElementById("seventh-icon");
 
 const apikey = "1ffa8a66804d64ed7ae1213c9ac1bf3e"
 
@@ -56,14 +49,6 @@ function getWeatherData () {
             renderSixthDayForecast(data)
             renderSeventhDayForecast(data)
             renderCityName(data);
-            renderFirstWeatherIcon(data);
-            renderSecondWeatherIcon(data);
-            renderThirdWeatherIcon(data);
-            renderFourthWeatherIcon(data);
-            renderFifthWeatherIcon(data);
-            renderSixthWeatherIcon(data);
-            renderSeventhWeatherIcon(data);
-
         })
     })
 }
@@ -94,10 +79,11 @@ function renderTodaysForecast (data) {
     let {temp_max, temp_min} = data.list[0].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
+    let {icon} = data.list[0].weather[0]
     
 
     currentTempEl.innerHTML = `<div class="today" id="current-temperature">
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="day" id="day"></div>
     <div class="temp">Night ${Math.round(minFahr)}&#x2109</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109</div>
@@ -109,11 +95,12 @@ function renderSecondDayForecast (data) {
     let {temp_max, temp_min} = data.list[1].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
+    let {icon} = data.list[1].weather[0]
     
 
     secondDay.innerHTML = `<div class="weather-forecast-item">
     <div id="secondday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109</div>
 </div>  
@@ -124,11 +111,12 @@ function renderThirdDayForecast (data) {
     let {temp_max, temp_min} = data.list[2].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
+    let {icon} = data.list[2].weather[0]
     
 
     thirdDay.innerHTML = `<div class="weather-forecast-item thirdday">
     <div id="thirdday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
@@ -139,11 +127,12 @@ function renderFourthDayForecast (data) {
     let {temp_max, temp_min} = data.list[3].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
-    
+    let {icon} = data.list[3].weather[0]
+
 
     fourthDay.innerHTML = `<div class="weather-forecast-item fourthday">
     <div id="fourthday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
@@ -154,11 +143,12 @@ function renderFifthDayForecast (data) {
     let {temp_max, temp_min} = data.list[4].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
+    let {icon} = data.list[4].weather[0]
     
 
     fifthDay.innerHTML = `<div class="weather-forecast-item fifthday">
     <div id="fifthday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
@@ -169,11 +159,12 @@ function renderSixthDayForecast (data) {
     let {temp_max, temp_min} = data.list[5].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
-    
+    let {icon} = data.list[5].weather[0]
+
 
     sixthDay.innerHTML = `<div class="weather-forecast-item sixthday">
     <div id="sixthday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
@@ -184,11 +175,13 @@ function renderSeventhDayForecast (data) {
     let {temp_max, temp_min} = data.list[6].main;
     let minFahr = temp_min * 9 / 5 + 32;
     let maxFahr = temp_max * 9 / 5 + 32;
+    let {icon} = data.list[6].weather[0]
+
     
 
     seventhDay.innerHTML = `<div class="weather-forecast-item seventhday">
     <div id="seventhday"></div>
-    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+    <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" class="w-icon">
     <div class="temp">Night ${Math.round(minFahr)}&#x2109;</div>
     <div class="temp">Day ${Math.round(maxFahr)}&#x2109;</div>
 </div>
@@ -201,42 +194,4 @@ function renderCityName (data) {
     currentCity.innerHTML = `<div class="current-city">
     <p>${name}</p>
 </div>`
-}
-
-function renderFirstWeatherIcon (data) {
-    let {icon} = data.list[0].weather[0]
-
-    firstIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-
-function renderSecondWeatherIcon (data) {
-    let {icon} = data.list[1].weather[0]
-
-    secondIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-
-function renderThirdWeatherIcon (data) {
-    let {icon} = data.list[2].weather[0]
-
-    thirdIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-function renderFourthWeatherIcon (data) {
-    let {icon} = data.list[3].weather[0]
-
-    fourthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-function renderFifthWeatherIcon (data) {
-    let {icon} = data.list[4].weather[0]
-
-    fifthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-function renderSixthWeatherIcon (data) {
-    let {icon} = data.list[5].weather[0]
-
-    sixthIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
-}
-function renderSeventhWeatherIcon (data) {
-    let {icon} = data.list[6].weather[0]
-
-    seventhIcon.innerHTML =`<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="weather-icon" id="first-icon" class="w-icon">`;
 }
